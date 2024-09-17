@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>Joomdle Course navigation</name>
+	<creationDate>December 2011</creationDate>
+    <author>Qontori Pte Ltd</author>
+    <copyright>Copyright (C) 2014 Qontori Pte Ltd</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <authorEmail>development@qontori.com</authorEmail>
+    <authorUrl>www.qontori.com</authorUrl>
+    <version>1.1.0</version>
+	<description>Shows course navigation block</description>
+	<files>
+		<filename module="mod_joomdle_coursenavigation">mod_joomdle_coursenavigation.php</filename>
+		<filename module="mod_joomdle_coursenavigation">index.html</filename>
+		<filename module="mod_joomdle_coursenavigation">helper.php</filename>
+		<filename module="mod_joomdle_coursenavigation">tmpl/default.php</filename>
+	</files>
+	  <languages>
+		<language tag="en-GB">language/en-GB.mod_joomdle_coursenavigation.ini</language>
+		<language tag="es-ES">language/es-ES.mod_joomdle_coursenavigation.ini</language>
+		<language tag="de-DE">language/de-DE.mod_joomdle_coursenavigation.ini</language>
+		<language tag="fr-FR">language/fr-FR.mod_joomdle_coursenavigation.ini</language>
+		<language tag="it-IT">language/it-IT.mod_joomdle_coursenavigation.ini</language>
+	  </languages>
+<config><fields name="params"><fieldset name="basic">
+			<field name="show_coursecontents" class="btn-group" type="radio" default="1" label="COM_JOOMDLE_SHOW_COURSECONTENTS" description="COM_JOOMDLE_SHOW_COURSECONTENTS">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_coursewrapper" class="btn-group" type="radio" default="1" label="COM_JOOMDLE_SHOW_COURSEWRAPPER" description="COM_JOOMDLE_SHOW_COURSEWRAPPER">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_coursemates" class="btn-group" type="radio" default="1" label="COM_JOOMDLE_SHOW_COURSEMATES" description="COM_JOOMDLE_SHOW_COURSEMATES">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_coursenews" class="btn-group" type="radio" default="1" label="COM_JOOMDLE_SHOW_COURSENEWS" description="COM_JOOMDLE_SHOW_COURSENEWS">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_courseevents" class="btn-group"  type="radio" default="1" label="COM_JOOMDLE_SHOW_COURSEEVENTS" description="COM_JOOMDLE_SHOW_COURSEEVENTS">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_coursegrades" class="btn-group" type="radio" default="1" label="COM_JOOMDLE_SHOW_COURSEGRADES" description="COM_JOOMDLE_SHOW_COURSEGRADES">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_coursegroup" class="btn-group" type="radio" default="0" label="COM_JOOMDLE_SHOW_COURSEGROUP" description="COM_JOOMDLE_SHOW_COURSEGROUP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+	        <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+    </fieldset></fields></config>
+</extension>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>Joomdle course categories</name>
+	<creationDate>April 2013</creationDate>
+	<author>Qontori Pte Ltd</author>  
+	<copyright>Copyright (C) 2014 Qontori Pte Ltd</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>development@qontori.com</authorEmail>
+	<authorUrl>www.qontori.com</authorUrl>
+	<version>1.0.1</version>
+	<description>Joomdle course categories</description>
+	<files>
+		<filename module="mod_joomdle_coursecategories">mod_joomdle_coursecategories.php</filename>
+		<filename module="mod_joomdle_coursecategories">index.html</filename>
+		<filename module="mod_joomdle_coursecategories">helper.php</filename>
+		<filename module="mod_joomdle_coursecategories">tmpl/default.php</filename>
+
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_joomdle_coursecategories.sys.ini</language>
+		<language tag="en-GB">language/en-GB.mod_joomdle_coursecategories.ini</language>
+		<language tag="es-ES">language/es-ES.mod_joomdle_coursecategories.ini</language>
+	</languages>
+<config><fields name="params"><fieldset name="basic">
+
+	<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+
+	</fieldset></fields></config>
+</extension>

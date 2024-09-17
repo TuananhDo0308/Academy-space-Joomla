@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+    <name>Joomdle Course Content Plugin</name>
+    <version>1.4.0</version>
+    <creationDate>November 2011</creationDate>
+    <author>Qontori Pte Ltd</author>  
+    <copyright>Copyright (C) 2014 Qontori Pte Ltd</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <authorEmail>development@qontori.com</authorEmail>
+    <authorUrl>www.qontori.com</authorUrl>
+    <description>Shows a Moodle course info in the content. 
+    Usage: {joomdlecourse id=3}
+{joomdlecourse id=3 link_to=detail show_description=1 link_to_course=0 show_language=0 show_startdate=0 show_enroldates=0 show_enrolperiod=0 show_cost=0 show_topicsnumber=0 free_courses_button=enrol paid_courses_button=buy override_button_text="Custom text"}
+    </description>
+    
+    <files>
+        <filename plugin="joomdle_content_course">joomdle_content_course.php</filename>
+        <folder>joomdle_content_course</folder>
+    </files>
+
+    <languages folder="languages">
+        <language tag="en-GB">en-GB.plg_content_joomdle_content_course.ini</language>
+        <language tag="es-ES">es-ES.plg_content_joomdle_content_course.ini</language>
+    </languages>
+
+    <config><fields name="params"><fieldset name="basic">
+        <field name="link_to" type="list" default="detail" label="COM_JOOMDLE_LINK_TO" description="COM_JOOMDLE_LINK_TO">
+          <option value="none">None</option>
+          <option value="course">Course view</option>
+          <option value="detail">Detail</option>
+          <option value="moodle">Moodle</option>
+        </field>
+        <field name="show_description" class="btn-group btn-group-yesno" type="radio" default="1" label="COM_JOOMDLE_SHOW_DESCRIPTION">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="show_language" class="btn-group btn-group-yesno" type="radio" default="0" label="COM_JOOMDLE_SHOW_LANGUAGE">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="show_startdate" class="btn-group btn-group-yesno" type="radio" default="0" label="COM_JOOMDLE_SHOW_STARTDATE">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="show_enroldates" class="btn-group btn-group-yesno" type="radio" default="0" label="COM_JOOMDLE_SHOW_ENROLDATES">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="show_enrolperiod" class="btn-group btn-group-yesno" type="radio" default="0" label="COM_JOOMDLE_SHOW_ENROLMENT_DURATION">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="show_cost" class="btn-group btn-group-yesno" type="radio" default="0" label="COM_JOOMDLE_SHOW_COST">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="show_topicsnumber" class="btn-group btn-group-yesno" type="radio" default="0" label="COM_JOOMDLE_SHOW_TOPICSNUMBER">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="free_courses_button" class="btn-group" type="list" default="0" label="COM_JOOMDLE_SHOW_FREE_COURSES_BUTTON">
+          <option value="0">None</option>
+          <option value="enrol">COM_JOOMDLE_ENROL_GOTO_BUTTON</option>
+          <option value="goto">COM_JOOMDLE_GOTO_BUTTON</option>
+          <option value="applicate">COM_JOOMDLE_APPLICATE_BUTTON</option>
+        </field>
+        <field name="paid_courses_button" class="btn-group" type="list" default="0" label="COM_JOOMDLE_SHOW_PAID_COURSES_BUTTON" description="COM_JOOMDLE_SHOW_PAID_COURSES_BUTTON_DESCRIPTION">
+            <option value="0">None</option>
+            <option value="buy">COM_JOOMDLE_BUY_BUTTON</option>
+            <option value="paypal">COM_JOOMDLE_PAYPAL_BUTTON</option>
+        </field>
+        <field name="override_button_text"  type="text" default="" label="COM_JOOMDLE_OVERRIDE_BUTTON_TEXT" description="COM_JOOMDLE_OVERRIDE_BUTTON_TEXT_DESCRIPTION">
+        </field>
+    </fieldset></fields></config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Joomdle">http://www.joomdle.com/index.php?option=com_ars&amp;view=update&amp;task=stream&amp;format=xml&amp;id=25</server>
+    </updateservers>
+
+</extension>

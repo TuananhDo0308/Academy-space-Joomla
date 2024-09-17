@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+            name="search"
+            type="text"
+            inputmode="search"
+            label="COM_JOOMDLE_SEARCH"
+            description="COM_JOOMDLE_SEARCH"
+            hint="COM_JOOMDLE_SEARCH"
+        />
+        <field
+            name="state"
+            type="joomdleuser"
+            label="COM_JOOMDLE_SELECT_USERS"
+            description="COM_JOOMDLE_SELECT_USERS"
+            hint="JSEARCH_FILTER"
+            onchange="this.form.submit();"
+        >
+        </field>
+        <field
+            name="group_id"
+            type="usergrouplist"
+            label="COM_JOOMDLE_FILTER_GROUP"
+            description="COM_JOOMDLE_FILTER_GROUP_DESC"
+            onchange="this.form.submit();"
+            >
+            <option value="">COM_JOOMDLE_FILTER_USERGROUP</option>
+        </field>
+    </fields>
+    <fields name="list">
+        <field
+            name="fullordering"
+            type="list"
+            label="JGLOBAL_SORT_BY"
+            onchange="this.form.submit();"
+            default="name ASC"
+            validate="options"
+            >
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="name ASC">JGLOBAL_NAME_ASC</option>
+            <option value="name DESC">JGLOBAL_NAME_DESC</option>
+            <option value="username ASC">COM_JOOMDLE_HEADING_USERNAME_ASC</option>
+            <option value="username DESC">COM_JOOMDLE_HEADING_USERNAME_DESC</option>
+            <option value="email ASC">COM_JOOMDLE_HEADING_EMAIL_ASC</option>
+            <option value="email DESC">COM_JOOMDLE_HEADING_EMAIL_DESC</option>
+        </field>
+        <field
+            name="limit"
+            type="limitbox"
+            label="JGLOBAL_LIST_LIMIT"
+            default="25"
+            onchange="this.form.submit();"
+        />
+    </fields>
+</form>
