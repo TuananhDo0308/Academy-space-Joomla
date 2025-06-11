@@ -10,7 +10,6 @@ This is a web-based online learning platform developed using **Joomla**, **Moodl
 
 This project is a standalone application developed as part of a university assignment. The source code and related assets can be found in the project's repository:
 
-- **Source Code:** [Online Learning Platform](https://github.com/TuananhDo0308/online-learning-platform.git) *(Placeholder link, replace with actual repository if available)*
 
 ---
 
